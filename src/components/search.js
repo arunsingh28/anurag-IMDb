@@ -18,7 +18,6 @@ const Search = () => {
       `http://www.omdbapi.com/?s=${query}&apikey=9e49d4e7`
     );
     const cb = await data.json();
-    console.log(cb);
     setD(cb.Search);
   };
   return (
@@ -32,14 +31,19 @@ const Search = () => {
           }}
           placeholder="Enter movie name"
         />
-        <Button onClick={getData}> GET DATA </Button>
+        <Button onClick={getData}> FIND </Button>
       </Flex>
       <Grid>
         {(d &&
           d.map((i) => {
             return (
               <Card>
-                <img src={i.Poster} height="400" width="300" alt={i.Title} />
+                <img
+                  src={i.Poster}
+                  height="400"
+                  width="300"
+                  alt={(i && i.Title) || "Image not available"}
+                />
                 <H1> {i.Title}</H1>
                 <p>Release {i.Year}</p>
                 <p>Type {i.Type}</p>

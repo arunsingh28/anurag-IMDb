@@ -25,6 +25,7 @@ export const Input = styled.input `
   padding-left: 5px;
   width: 100%;
   font-size: 20px;
+  margin-top: 10px;
 
   &::placeholder {
     font-size: 17px;
@@ -41,7 +42,9 @@ export const Button = styled.button `
   border: 2px solid palevioletred;
   color: palevioletred;
   margin: 0 1em;
-  padding: 6px 50px;
+  height: 45px;
+  margin-top: 10px;
+  padding: 0px 50px;
   cursor: pointer;
   transition: all 0.2s ease;
 
@@ -61,5 +64,10 @@ export const Grid = styled.div `
 
 export const Card = styled.div `
   padding: 4px;
-  border: 1px #fff solid;
+  border: 2px #757373 solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
 `;
