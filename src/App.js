@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import Search from "./components/search";
 
 const App = () => {
-  return <div> app </div>;
+  return <Search />;
 };
 
 export default App;
