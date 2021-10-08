@@ -15,7 +15,7 @@ const Search = () => {
   const [query, setQuery] = useState();
   const getData = async () => {
     const data = await fetch(
-      `http://www.omdbapi.com/?s=${query}&apikey=9e49d4e7`
+      `https://www.omdbapi.com/?s=${query}&apikey=9e49d4e7`
     );
     const cb = await data.json();
     setD(cb.Search);
