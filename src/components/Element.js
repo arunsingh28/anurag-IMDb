@@ -1,14 +1,24 @@
 import styled from "styled-components";
 
+const mobile = 300;
+
 export const Container = styled.div `
   padding: 10px 50px;
   width: 100%;
   background-color: #262626;
   color: #fff;
+
+  @media (max-width: ${mobile}px) {
+    padding: 0px 2px;
+  }
 `;
 export const Flex = styled.div `
   display: flex;
   justify-content: center;
+
+  @media (max-width: ${mobile}px) {
+    display: inline;
+  }
 `;
 
 export const H1 = styled.h1 `
@@ -17,6 +27,7 @@ export const H1 = styled.h1 `
   font-weight: 100;
   font-size: 25px;
   text-align: center;
+  white-space: pre-wrap;
 `;
 export const Input = styled.input `
   height: 45px;
@@ -48,18 +59,26 @@ export const Button = styled.button `
   cursor: pointer;
   transition: all 0.2s ease;
 
+  @media (max-width: ${mobile}px) {
+    display: block;
+    margin: 10px auto 0px 0px;
+  }
+
   &:hover {
     color: #fff;
     background-color: palevioletred;
   }
 `;
 export const Grid = styled.div `
-  margin-top: 50px;
+  margin-top: 40px;
   display: grid;
   gap: 5px;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
-  /* align-items: center; */
+
+  @media (max-width: ${mobile}px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const Card = styled.div `

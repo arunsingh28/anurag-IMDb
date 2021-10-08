@@ -45,8 +45,16 @@ const Search = () => {
                   alt={(i && i.Title) || "Image not available"}
                 />
                 <H1> {i.Title}</H1>
-                <p>Release {i.Year}</p>
-                <p>Type {i.Type}</p>
+                <table border="2">
+                  <tr>
+                    <td>Relased Data</td>
+                    <td>{i.Year}</td>
+                  </tr>
+                  <tr>
+                    <td>Type</td>
+                    <td>{i.Type}</td>
+                  </tr>
+                </table>
               </Card>
             );
           })) || <Error>no data found ...</Error>}
